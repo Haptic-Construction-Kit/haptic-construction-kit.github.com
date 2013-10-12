@@ -147,13 +147,13 @@
 
           <p>To build a CUbiC Haptic Device, you'll need a few things:</p>
           <ul>
-            <li>You'll need some tactors. We have a couple options at this point, <a href="https://github.com/Haptic-Modules/haptic-tactor">a single tactor</a>, or <a href="https://github.com/Haptic-Modules/haptic-tactor-strip/">a strip of 8</a>. You may need to program them with <a href="https://github.com/Haptic-Modules/haptic-firmware">firmware</a>.</li>
+            <li>You'll need some tactors. We have a couple options at this point, <a href="https://github.com/Haptic-Modules/haptic-tactor">a single tactor</a>, or <a href="https://github.com/Haptic-Modules/haptic-tactor-strip/">a strip of 8</a>. You may need to program them with <a href="https://github.com/Haptic-Construction-Kit/haptic-firmware-erm">firmware</a>.</li>
 
-            <li>You need a controller, probably just an arduino - the most compatible is the <a href="https://www.sparkfun.com/products/11520">FIO v3</a> and the <a href="https://github.com/Haptic-Modules/haptic-firmware">haptic firmware</a>.</li>
+            <li>You need a controller, probably just an arduino - the most compatible is the <a href="https://www.sparkfun.com/products/11520">FIO v3</a>, and the Arduino <a href="https://github.com/Haptic-Construction-Kit/haptic-firmware">firmware sketch</a>.</li>
 
-            <li>Wires. Sadly because of our size constrains and legacy we're using a JST part which can be difficult to crimp yourself. Part numbers can be found in any of the hardware repositories</li>
+            <li>Wires. Sadly because of our size constrains and legacy we're using a JST part which can be difficult to crimp yourself. Part numbers can be found in any of the hardware repositories.</li>
 
-            <li>You can communicate with the belt with just arduino (or any other serial terminal), but you'll want a 'driver.' We have a <a href="https://github.com/Haptic-Construction-Kit/pyhaptic">cross platform python implementation</a> or in windows we have a <a href="https://github.com/Haptic-Construction-Kit/HapticDriver">.net implementation</a></li>
+            <li>You can communicate with the belt with just arduino (or any other serial terminal), but you'll want a 'driver.' We have a <a href="https://github.com/Haptic-Construction-Kit/pyhaptic">cross platform python implementation</a> or in windows we have a <a href="https://github.com/Haptic-Construction-Kit/HapticDriver">.net DLL</a></li>
 
             <li>Finally, you'll want a host program, and eventually want to change it around to make it your own. On python theres an <a href="https://github.com/Haptic-Construction-Kit/pyhaptic">example .py in the pyhaptic driver</a>. For windows .net several program have been written including <a href="https://github.com/Haptic-Construction-Kit/HaptikosPC">Haptikos</a> and <a href="https://github.com/Haptic-Construction-Kit/WizardOfOz">Wizardofoz</a></li>
           </ul>
