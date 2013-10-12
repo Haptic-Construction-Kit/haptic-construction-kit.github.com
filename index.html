@@ -2,7 +2,7 @@
 <!-- saved from url=(0062)../examples/index.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>Template · Bootstrap</title>
+    <title>Haptic Construction Kit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -98,23 +98,10 @@
   <body>
 
     <div class="container">
-
+      <a href="https://github.com/Haptic-Construction-Kit"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
       <div class="masthead">
         <h3 class="muted">Haptic Construction Kit</h3>
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="container">
-              <ul class="nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#hardware">Hardware</a></li>
-                <li><a href="#firmware">Firmware</a></li>
-                <li><a href="#software">Software</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- /.navbar -->
+
       </div>
 
       <!-- Jumbotron -->
@@ -129,45 +116,10 @@
       <div class="row-fluid">
         <div class="span4">
           <h2>Current</h2>
-          <p>Originally developed for vibration in belt form factor display, current work is extending the device for more tactors, with more on at a time, to create a 2d display (for a back or tabletop form factor)</p>
+          <p>Originally developed for vibration in a belt form factor, current work is extending the device for more tactors, with more on at a time, to create a 2D display for a back or tabletop form factor!</p>
           <p></p>
         </div>
         <div class="span4">
-          <h2>Future</h2>
-          <p>Future work will include adding new tactor types including temperature, solenoid, and new more advanced vibration modules called LRAs.
-          </p>
-          <p></p>
-       </div>
-        <div class="span4">
-          <h2>Big Thanks</h2>
-          <p>The Haptic Construction Kit was originally done as part of Senior project at <a href ="http://cubic.asu.edu/">ASU Cubic</a> lab by Jacob Rosenthal, Nathan Edwards, Jon Lindsay, Daniel Moberly, and Kris Blair overseen by Shreekar Krishna and Troy McDaniel. Current development is also funded by the Cubic Lab via a grant from xxx.</p>
-          <p></p>
-        </div>
-      </div>
-
-      <div class="row-fluid">
-        <div class="span12" id="hardware">
-          <h2>Hardware</h2>
-          <p>The Haptic Construction Kit hardware currently includes the <a href="https://github.com/Haptic-Modules/haptic-controller/tags">Controller module</a>, and a <a href="https://github.com/Haptic-Modules/haptic-tactor/tags">vibration module</a>, or a <a href="https://github.com/Haptic-Modules/haptic-tactor-strip/tags">tactor strip</a> including 8 modules and an <a href="https://github.com/Haptic-Modules/haptic-extender/tags">extender module</a>.</p>
-        </div>
-      </div>
-
-      <div class="row-fluid">
-        <div class="span12" id="firmware">
-          <h2>Firwmare</h2>
-          <p>The <a href="https://github.com/Haptic-Modules/haptic-firmware/tags">firmware</a> which drives the tactor and controller module is available as well. The device is usable via the firmare through a terminal</p>
-        </div>
-      </div>
-
-      <div class="row-fluid">
-        <div class="span12" id="software">
-          <h2>Software</h2>
-          <p>While the device is usable via terminal, you'll probably want to use or develop a custom application. There are also several <a href="https://github.com/Haptic-Modules/HaptikosPC/tags">.net</a> <a href="https://github.com/Haptic-Modules/WizardOfOz/tags">applications</a> and a <a href="https://github.com/Haptic-Modules/HapticDriver/tags">dll</a> written to interface the controller.</p>
-        </div>
-      </div>
-
-      <div class="row-fluid">
-        <div class="span12" index="publications">
           <h2>Publications</h2>
           <p>The devices have been used in many studies by the Cubic Lab:
           <ul>
@@ -178,11 +130,36 @@
             <li>three
             </li>
           </ul>
-
-
             Let us know if you use it in yours.</p>
+       </div>
+        <div class="span4">
+          <h2>Big Thanks</h2>
+          <p>The Haptic Construction Kit was originally done as part of Senior project at <a href ="http://cubic.asu.edu/">ASU CUbiC</a> lab by Jacob Rosenthal, Nathan Edwards, Jon Lindsay, Daniel Moberly, and Kris Blair overseen by Shreekar Krishna and Troy McDaniel.</p>
+          <p></p>
         </div>
       </div>
+
+      <div class="row-fluid">
+        <div class="span12" id="hardware">
+          <h2>Getting Started</h2>
+
+          <p>Greetings traveler. Presumably you're working at the CUbiC Lab at ASU, or perhaps you're a curious internet human. Either way, welcome.</p>
+
+          <p>To build a CUbiC Haptic Device, you'll need a few things:</p>
+          <ul>
+            <li>You'll need some tactors. We have a couple options at this point, <a href="https://github.com/Haptic-Modules/haptic-tactor/tags">a single tactor</a>, or <a href="https://github.com/Haptic-Modules/haptic-tactor-strip/">a strip of 8</a>. You may need to program them with <a href="https://github.com/Haptic-Modules/haptic-firmware">firmware</a>.</li>
+
+            <li>You need a controller, probably just an arduino - the most compatible is the <a href="https://www.sparkfun.com/products/11520">FIO v3</a> and the <a href="https://github.com/Haptic-Modules/haptic-firmware">haptic firmware</a>.</li>
+
+            <li>Wires. Sadly because of our size constrains and legacy we're using a JST part which can be difficult to crimp yourself. Part numbers can be found in any of the hardware repositories</li>
+
+            <li>You can communicate with the belt with just arduino (or any other serial terminal), but you'll want a 'driver.' We have a <a href="https://github.com/Haptic-Construction-Kit/pyhaptic">cross platform python implementation</a> or in windows we have a <a href="https://github.com/Haptic-Construction-Kit/HapticDriver">.net implementation</a></li>
+
+            <li>Finally, you'll want a host program, and eventually want to change it around to make it your own. On python theres an <a href="https://github.com/Haptic-Construction-Kit/pyhaptic">example .py in the pyhaptic driver</a>. For windows .net several program have been written including <a href="https://github.com/Haptic-Construction-Kit/HaptikosPC">Haptikos</a> and <a href="https://github.com/Haptic-Construction-Kit/WizardOfOz">Wizardofoz</a></li>
+          </ul>
+        </div>
+      </div>
+
 
       <div class="row-fluid">
         <div class="span12" id="contact">
@@ -191,7 +168,9 @@
         </div>
       </div>
 
-      <hr>
+      
+      
+      
 
 
     </div> <!-- /container -->
